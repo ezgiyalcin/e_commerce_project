@@ -1,0 +1,247 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #aa076b, #61045f);
+    height: 100px;
+    padding: 30px;
+    color: white;
+    box-shadow: 2px 2px 20px #61045f;
+
+    & input {
+        width: 35%;
+        height: 40px;
+        border-radius: 20px;
+        padding: 10px;
+
+    }
+
+    & div {
+        display: flex;
+        gap: 10px;
+
+        & button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 600;
+            cursor: pointer;
+            color: white;
+        }
+
+        & :nth-child(1) {
+            background: black;
+        }
+
+        & :nth-child(2) {
+            background: blue;
+        }
+
+        & :nth-child(3) {
+            background: red;
+        }
+    }
+}
+
+section {
+    padding: 50px;
+}
+
+#categorySec {
+
+    & .categories {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & .category {
+            max-width: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 150px;
+
+            & img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+            & span {
+                position: absolute;
+                text-align: center;
+                background: white;
+                padding: 10px;
+                bottom: 10px;
+                width: 70%;
+                border-radius: 10px;
+                font-weight: 600;
+                box-shadow: 2px 2px 10px #000000;
+            }
+        }
+    }
+}
+
+#productSec {
+    & .products {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 40px;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        & .product {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            background: white;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 1px 1px 5px #747474;
+            width: 180px;
+            padding: 10px;
+            gap: 10px;
+
+            & .productBottom {
+                display: flex;
+                justify-content: space-between;
+                background: black;
+                height: 30px;
+                padding: 5px;
+                align-items: center;
+                border-radius: 5px;
+
+                & p {
+                    color: white;
+                    font-size: 12px;
+                }
+
+                & button {
+                    background: linear-gradient(to right, #d70386, #bc08bc);
+                    cursor: pointer;
+                    color: white;
+                    font-size: 10px;
+                    border-radius: 5px;
+                    border: none;
+                    padding: 3px;
+                }
+            }
+
+        }
+    }
+}
+
+.modalWrapper {
+    background: rgba(0, 0, 0, 0.365);
+    width: 100vw;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    place-items: center;
+    
+
+    & .modalInner {
+        background: white;
+        width: 70%;
+        height: 400px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+
+        & .icon {
+            display: flex;
+            justify-content: end;
+
+            & img {
+                width: 40px;
+                cursor: pointer;
+                background: transparent;
+                border: none;
+
+                &:hover {
+                    scale: .9;
+                }
+            }
+
+
+        }
+
+        & .basketList {
+            padding: 5px 0 0 0;
+            overflow-y: auto;            
+            position:relative;
+            margin-bottom: 20px;
+
+            & .list {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 5px;
+                align-items: center;
+                
+               
+
+                & .listItem {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 20px;
+                    align-items: center;
+                    box-shadow: 1px 1px 5px #747474;
+                    padding: 10px;
+                    border-radius: 10px;
+                    font-size: 8px;
+                    margin-top: 1px;
+                   margin-bottom: 20px;
+                    width: 90%;
+                    & p{
+                        font-size: 14px;
+                    }
+                    & img {
+                        border-radius: 50%;
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    & button {
+                        border: 1px solid red;
+                        padding: 3px 6px;
+                        background: none;
+                        border-radius: 3px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: red;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.active {
+    display: grid;
+}
+
+.basketTotalGen{
+    text-align: end;
+    padding-right: 30px;
+    bottom: 0;
+   
+}
